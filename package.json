@@ -14,7 +14,7 @@
     "jsdom": "9.2.1",
     "mocha": "^5.2.0",
     "react-scripts": "^1.1.4",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.11"
   },
   "dependencies": {
     "babel-core": "^6.22.1",
@@ -37,7 +37,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha -w test/helpers/browser.js test/*.js",
+    "test": "mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json",
     "eject": "react-scripts eject"
   }
 }
